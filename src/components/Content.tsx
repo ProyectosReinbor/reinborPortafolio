@@ -1,3 +1,6 @@
+
+
+// 5. components/Content.tsx
 export default function Content() {
     return (
         <section id="content" className="py-24 px-6 max-w-4xl mx-auto text-center">
@@ -6,8 +9,8 @@ export default function Content() {
                 Tutoriales de desarrollo web en YouTube y TikTok.
             </p>
             <div className="flex justify-center gap-6 mt-8">
-                <a className="text-purple-400 hover:underline" href="https://youtube.com" target="_blank">YouTube</a>
-                <a className="text-purple-400 hover:underline" href="https://tiktok.com" target="_blank">TikTok</a>
+                <a className="text-purple-400 hover:underline" href="https://www.youtube.com/@reinbor_otvel" target="_blank">YouTube</a>
+                <a className="text-purple-400 hover:underline" href="https://www.tiktok.com/@reinbor_otvel" target="_blank">TikTok</a>
             </div>
         </section>
     )

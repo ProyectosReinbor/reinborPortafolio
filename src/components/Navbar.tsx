@@ -1,3 +1,5 @@
+
+// 3. components/Navbar.tsx
 import { useEffect, useState } from 'react'
 import { motion } from 'framer-motion'
 
@@ -38,12 +40,12 @@ export default function Navbar() {
                 className={`flex items-center gap-8 px-8 ${scrolled ? 'py-3' : 'py-4'} rounded-2xl bg-black/60 backdrop-blur-xl border border-purple-500/30 transition-all duration-300 shadow-[0_0_30px_#a855f7]`}
             >
                 {/* Logo */}
-                <img src="/logo.svg" alt="reinbor" className="w-8 h-8" />
+                <img src="/logo.png" alt="reinbor" className="w-8 h-8" />
 
                 {sections.map(s => (
                     <a
                         key={s.id}
-                        href={`#${s.id}`}
+                        href={`/#${s.id}`}
                         className={`text-sm transition-all duration-200 ${active === s.id
                             ? 'text-purple-400 drop-shadow-[0_0_8px_#a855f7]'
                             : 'text-gray-300 hover:text-purple-400 hover:drop-shadow-[0_0_12px_#a855f7]'
