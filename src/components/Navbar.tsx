@@ -15,11 +15,12 @@ export default function Navbar() {
     useEffect(() => {
         const onScroll = () => {
             setScrolled(window.scrollY > 50)
+            if (window.scrollY < 50) setActive('')
             sections.forEach(s => {
                 const el = document.getElementById(s.id)
                 if (!el) return
                 const rect = el.getBoundingClientRect()
-                if (rect.top <= 120 && rect.bottom >= 120) {
+                if (window.scrollY >= rect.top + 50) {
                     setActive(s.id)
                 }
             })

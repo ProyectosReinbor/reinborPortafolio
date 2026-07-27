@@ -4,7 +4,6 @@ import Hero from "./components/Hero";
 import Projects from "./components/Projects";
 import Content from "./components/Content";
 import Footer from "./components/Footer";
-import ProjectPage from "./pages/ProjectPage";
 import AnimatedGrid from "./components/AnimatedGrid";
 
 export default function App() {
@@ -28,7 +27,6 @@ export default function App() {
                 </>
               }
             />
-            <Route path="/projects/:slug" element={<ProjectPage />} />
           </Routes>
 
           <Footer />

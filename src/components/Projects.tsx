@@ -1,19 +1,25 @@
 import { motion } from "framer-motion";
-import { Link } from "react-router-dom";
 
 const projects = [
     {
+        slug: "tempo-noble",
+        title: "Tempo Noble",
+        desc: "Catalogo elegante de relojes 1.1, pedidos por Whatsapp",
+        tech: ["React", "Tailwind", "TypeScript"],
+    },
+    {
         slug: "licorcity",
         title: "LicorCity",
-        desc: "Pagina web para la licorera LicorCity, con catalogo de productos. Administraccion de manejo de mesas y facturación.",
+        desc: "Catalogo de productos, carrito, domicilio mensaje por Whatsapp",
         tech: ["React", "Tailwind", "TypeScript"],
     },
     {
         slug: "fileexporter",
         title: "File exporter",
-        desc: "Herramientas para vibecoding, contexto en txt de los archivos de tu proyecto con sus rutas para copiar, Aplicacion .exe y pagina web",
+        desc: "Contexto para IA del codigo de tu proyecto, Aplicacion .exe y version web",
         tech: ["Nodejs", "html", "electron"],
     },
+
 ];
 
 const container = {
@@ -36,7 +42,7 @@ export default function Projects() {
                 initial="hidden"
                 whileInView="show"
                 viewport={{ once: true }}
-                className="grid md:grid-cols-2 gap-10"
+                className="grid md:grid-cols-2 gap-15"
             >
                 {projects.map((p) => (
                     <motion.div
@@ -60,12 +66,12 @@ export default function Projects() {
                             ))}
                         </div>
 
-                        <Link
-                            to={`/projects/${p.slug}`}
+                        <button
+                            onClick={() => window.open(`https://${p.slug}.reinbor.cloud`)}
                             className="inline-block mt-6 text-purple-400 hover:underline"
                         >
                             Ver proyecto →
-                        </Link>
+                        </button>
                     </motion.div>
                 ))}
             </motion.div>
