@@ -2,6 +2,25 @@ import { motion } from "framer-motion";
 
 const projects = [
     {
+        slug: "eco-del-amanecer",
+        title: "Eco del Amanecer",
+        desc: "Videojuego hecho en Godot para la primer Game Jam de la Universidad de los Llanos, Villavicencio Colombia",
+        tech: ["Godot", "Game Jam", "GDScript"],
+        url: "https://reinbor.itch.io/eco-del-amanecer",
+    },
+    {
+        slug: "3daodrag",
+        title: "Reinos Ancestrales",
+        desc: "Juego RPG multijugador con sistema de combate, inventario y tienda",
+        tech: ["Node.js", "SQLite", "WebSocket", "React"],
+    },
+    {
+        slug: "rematicos",
+        title: "Remáticos Storefront",
+        desc: "Tienda virtual de productos con catálogo, carrito y pasarela de pagos",
+        tech: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
+    },
+    {
         slug: "tempo-noble",
         title: "Tempo Noble",
         desc: "Catalogo elegante de relojes 1.1, pedidos por Whatsapp",
@@ -19,7 +38,6 @@ const projects = [
         desc: "Contexto para IA del codigo de tu proyecto, Aplicacion .exe y version web",
         tech: ["Nodejs", "html", "electron"],
     },
-
 ];
 
 const container = {
@@ -67,7 +85,7 @@ export default function Projects() {
                         </div>
 
                         <button
-                            onClick={() => window.open(`https://${p.slug}.reinbor.cloud`)}
+                            onClick={() => window.open(p.url || `https://${p.slug}.reinbor.cloud`)}
                             className="inline-block mt-6 text-purple-400 hover:underline"
                         >
                             Ver proyecto →
