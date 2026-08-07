@@ -19,6 +19,7 @@ const projects = [
         title: "Remáticos Storefront",
         desc: "Tienda virtual de productos con catálogo, carrito y pasarela de pagos",
         tech: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
+        adminUrl: "https://rematicosadmin.reinbor.cloud/",
     },
     {
         slug: "tempo-noble",
@@ -84,12 +85,22 @@ export default function Projects() {
                             ))}
                         </div>
 
-                        <button
-                            onClick={() => window.open(p.url || `https://${p.slug}.reinbor.cloud`)}
-                            className="inline-block mt-6 text-purple-400 hover:underline"
-                        >
-                            Ver proyecto →
-                        </button>
+                        <div className="flex gap-4 mt-6">
+                            <button
+                                onClick={() => window.open(p.url || `https://${p.slug}.reinbor.cloud`)}
+                                className="text-purple-400 hover:underline"
+                            >
+                                Ver proyecto →
+                            </button>
+                            {p.adminUrl && (
+                                <button
+                                    onClick={() => window.open(p.adminUrl)}
+                                    className="text-purple-400 hover:underline"
+                                >
+                                    Admin →
+                                </button>
+                            )}
+                        </div>
                     </motion.div>
                 ))}
             </motion.div>
