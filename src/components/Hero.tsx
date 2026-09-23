@@ -26,8 +26,8 @@ export default function Hero() {
                 transition={{ delay: 0.4 }}
                 className="relative z-10 mt-6 text-gray-400 max-w-xl"
             >
-                Desarrollador web y creador de contenido <br></br>
-                Construyo proyectos reales y enseño cómo hacerlos.
+                Estudiante Ing Sistemas<br></br>
+                Creador de contenido
             </motion.p>
 
             <motion.div
