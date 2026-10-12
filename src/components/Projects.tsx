@@ -9,10 +9,11 @@ const projects = [
         url: "https://reinbor.itch.io/eco-del-amanecer",
     },
     {
-        slug: "3daodrag",
-        title: "Reinos Ancestrales",
+        slug: "aodase",
+        title: "AODASE Pets",
         desc: "Juego RPG multijugador con sistema de combate, inventario y tienda",
         tech: ["Node.js", "SQLite", "WebSocket", "React"],
+        adminUrl: "https://aodaseadmin.reinbor.cloud/",
     },
     {
         slug: "rematicos",
