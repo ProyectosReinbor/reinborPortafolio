@@ -13,14 +13,12 @@ const projects = [
         title: "AODASE Pets",
         desc: "Juego RPG multijugador con sistema de combate, inventario y tienda",
         tech: ["Node.js", "SQLite", "WebSocket", "React"],
-        adminUrl: "https://aodaseadmin.reinbor.cloud/",
     },
     {
         slug: "rematicos",
         title: "Remáticos Storefront",
         desc: "Tienda virtual de productos con catálogo, carrito y pasarela de pagos",
         tech: ["Next.js", "Prisma", "PostgreSQL", "TypeScript"],
-        adminUrl: "https://rematicosadmin.reinbor.cloud/",
     },
     {
         slug: "tempo-noble",
@@ -93,14 +91,6 @@ export default function Projects() {
                             >
                                 Ver proyecto →
                             </button>
-                            {p.adminUrl && (
-                                <button
-                                    onClick={() => window.open(p.adminUrl)}
-                                    className="text-purple-400 hover:underline"
-                                >
-                                    Admin →
-                                </button>
-                            )}
                         </div>
                     </motion.div>
                 ))}
